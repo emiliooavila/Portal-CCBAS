@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  // Colores Institucionales
+  --uaa-azul-marino: #0c2340;
+  --uaa-azul-claro: #1d4277;
+  --uaa-dorado: #e5a823;
+  --uaa-dorado-hover: #c9931c; 
+  
+  // Colores Neutros
+  --texto-principal: #333333;
+  --texto-secundario: #666666;
+  --fondo-general: #f8f9fa;
+  --blanco: #ffffff;
+}
+
+.contenedor-principal {
+  min-height: calc(100vh - 200px);
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--fondo-general);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.btn-uaa {
+  background-color: var(--uaa-dorado);
+  color: var(--uaa-azul-marino);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--uaa-dorado-hover);
+    transform: translateY(-2px);
+  }
+}

@@ -1,1 +1,69 @@
-<p>info-tabs works!</p>
+<section class="tabs-section">
+  <div class="tabs-container">
+    
+    <nav class="tabs-nav">
+      <button [class.active]="activeTab === 'presentacion'" (click)="setActiveTab('presentacion')">Presentación</button>
+      <button [class.active]="activeTab === 'mision'" (click)="setActiveTab('mision')">Misión</button>
+      <button [class.active]="activeTab === 'vision'" (click)="setActiveTab('vision')">Visión</button>
+      <button [class.active]="activeTab === 'decanato'" (click)="setActiveTab('decanato')">Decanato</button>
+      <button [class.active]="activeTab === 'certificaciones'" (click)="setActiveTab('certificaciones')">Certificaciones y Reconocimientos</button>
+    </nav>
+
+    <div class="tabs-content">
+      
+      <div *ngIf="activeTab === 'presentacion'" class="tab-pane">
+        <h3>Presentación</h3>
+        <p>El Centro Básico, nombre original de nuestro centro, surgió desde el nacimiento de la Universidad Autónoma de Aguascalientes, y fue en este origen diseñado para agrupar las disciplinas relacionadas con las Ciencias Sociales y Naturales, lo anterior se mantuvo hasta el año de 1977, en el cual la universidad tuvo una reestructuración muy importante. Para este año se creyó conveniente que solamente las ciencias naturales pertenecieran a este centro. A partir de este rediseño, el Centro Básico ha sido el encargado de manejar la docencia, investigación y extensión de las disciplinas relacionadas a las Ciencias Físicas y Naturales.</p>
+        <p>En un principio estaba formado únicamente por cuatro departamentos: Biología, Química, Física y Matemáticas, así como Ciencias Sociales, pero sin ninguna carrera adscrita al mismo, únicamente se impartía apoyo docente a las carreras que en su plan de estudios requerían de alguna materia relacionada. La primera carrera con que contó nuestro centro fue Sociología, pero con la reestructuración ya mencionada en el año de 1977, y a raíz de la puesta en marcha del primer Plan de Desarrollo, las disciplinas sociales pasaron al recién creado Centro de Artes y Humanidades y, con ellas, la carrera de Sociología pasó a pertenecer a este último; pero al mismo tiempo, se adjudicaron al Centro Básico otros departamentos que en un principio estaban asignados al Centro Biomédico.</p>
+        <p>A partir de estas modificaciones, el Centro ya se integraba por los siguientes departamentos: Morfología, Física y Matemáticas, Biología, Micro-Biología, Bioquímica y Fisiología, así como Farmacología. También la carrera de Biología, adscrita en un principio al Centro Biomédico, se incorporó al Centro Básico en la restructuración debido a que el mayor porcentaje de materias de la currícula de esta carrera se encontraban adscritas al Centro Básico.</p>
+        <p>Posteriormente se agregaron el Departamento de Informática, con las carreras de Ingeniería en Sistemas Computacionales (1982) y Licenciatura en Informática (1986), el cual debido a su crecimiento se dividió en dos ocasiones, la primera en Sistemas de Información y en Sistemas Electrónicos, y la segunda, este último nuevamente se dividió en Sistemas Electrónicos y Ciencias de la Computación, la cual aportó la carrera de Ingeniería en Computación Inteligente.</p>
+        <p>Actualmente se llama Centro de Ciencias Básicas, cuenta con 11 PE de pregrado, el 100% de ellos con reconocimiento nacional al contar con el Nivel 1 de CIEES o estar reconocidos por el COPAES, a la fecha sólo el PE de Ing en Electrónica cuenta con reconocimiento internacional por ABET. Además es un centro líder en investigación y posgrado pues cuenta con seis PE de posgrado, cinco con reconocimiento en el PNPC del CONACyT y el otro está por someterse a evaluación por ser de reciente creación (aprobado por el Honorable Consejo Universitario en Junio de 2017); cuatro de estos programas de posgrado tienen reconocimiento internacional por la AUIP. Además, el centro cuenta con 14 cuerpos académicos: 2 en formación, 5 en consolidación y 7 consolidados.</p>
+        <p>Además de todo lo anterior, el centro apoya con las materias básicas a casi la totalidad de los PE de la Universidad Autónoma de Aguascalientes.</p>
+      </div>
+
+      <div *ngIf="activeTab === 'mision'" class="tab-pane">
+        <h3>Misión</h3>
+        <p>La Misión del Centro de Ciencias Básicas consiste en buscar la verdad por medio de la investigación científica y en transmitir el conocimiento de las disciplinas que en él se cultivan mediante la enseñanza y la difusión, contribuyendo con ello al desarrollo integral de Aguascalientes y de México.</p>
+        <p>Para el cumplimiento de esta misión se deberán tomar en cuenta los siguientes elementos:</p>
+        <p>El Centro deberá mantenerse en comunicación con su comunidad e intervendrá de manera positiva en su vida; la docencia, investigación y difusión se planearán de tal suerte que contribuyan al desarrollo integral de la región.</p>
+        <p>Se buscará que los estudiantes de este Centro comprendan los alcances y limitaciones de la ciencia como base del desarrollo moderno, que sean maduros y adopten actitudes de servicio y compromiso en lo que se refiere a su participación en la vida comunitaria, para que se constituyan como los profesionales que el estado y el país requieren para la realización del bien común.</p>
+        <p>Los estudios que se impartan en el Centro deberán ser de la más alta calidad académica a que sea posible aspirar, de acuerdo con las circunstancias. Por esta razón, en el desarrollo de las actividades académicas, se deberá buscar de manera permanente alcanzar niveles siempre superiores en la realización de la docencia, la investigación y la difusión. Para ello, deberán de elaborarse y desarrollarse planes y programas de estudios actualizados, así como implementarse líneas de investigación básica y aplicada altamente productivas. Deberá garantizarse el cumplimiento de esos planes y programas, así como las responsabilidades de profesores y alumnos.</p>
+        <p>El Centro diversificará sus opciones de estudio creando carreras, a nivel de licenciatura y posgrado, que respondan a las necesidades sociales, tomando en cuenta las perspectivas de empleo que puedan estimarse para los egresados y admitiendo los alumnos que permitan la planta física y los recursos humanos, siempre que se asegure la calidad.</p>
+        <p>El Centro tendrá el personal académico y administrativo que requiera el desarrollo de sus funciones. Para que los profesores e investigadores tengan el mejor nivel posible, habrá cuidadosos procedimientos de evaluación para ingreso, promoción y permanencia. Las relaciones laborales se regirán por la legislación aplicable. La planta docente estará integrada por personal capacitado, bien remunerado y permanentemente actualizado.</p>
+        <p>Las actividades administrativas se realizarán con el más alto grado de eficiencia. El Centro tendrá sistemas adecuados de planeación, organización, operación y control. Las estructuras administrativas deberán ser flexibles para adaptarse con facilidad a las necesidades que imponga el entorno. La autoridad se ejercerá como un servicio.</p>
+        <p>El Centro contará con los recursos financieros necesarios para realizar su misión con calidad, evitando desequilibrios económicos. Además de los apoyos internos, deberán obtenerse recursos mediante la oferta de servicios a la comunidad y la búsqueda de apoyos financieros externos. Los recursos se ejercerán de manera responsable, transparente y austera.</p>
+      </div>
+
+      <div *ngIf="activeTab === 'vision'" class="tab-pane">
+        <h3>Visión</h3>
+        <p>Para realizar su misión, el Centro de Ciencias Básicas desarrolla una docencia de pregrado y de posgrado de alta calidad y algunas de sus áreas de investigación han alcanzado estándares internacionales. Sus actividades académicas tienen pertinencia social. Los programas de extensión que en este centro se desarrollan contribuyen a resolver problemas de la región.</p>
+        <p>En lo relativo a la docencia de pregrado, ofrece carreras de gran calidad a sus estudiantes y apoya con la misma calidad educativa las carreras de los otros centros. Sus licenciaturas responden a las necesidades de la región y del país, cuentan con currículos flexibles y se actualizan oportunamente. Existe una relación adecuada entre la teoría y la práctica dentro de cada carrera y mecanismos de vinculación efectivos que relacionan a estas carreras con las futuras áreas de actividad profesional de sus egresados. Hay convenios con empresas para que los alumnos de este centro realicen prácticas profesionales y estancias de formación.</p>
+        <p>Las licenciaturas del Centro de Ciencias Básicas mantienen altos niveles de calidad que se controla con cuidadosos procedimientos de evaluación interna y mediante los procesos externos de evaluación que existen en el estado y en el país. Los egresados de las carreras de este centro obtienen resultados comparables a los de las mejores instituciones en los exámenes generales de calidad profesional y tienen un buen dominio del inglés y de la computación básica.</p>
+        <p>En lo relativo a la docencia de posgrado, desarrolla programas orientados a la formación de investigadores y a la profundización del conocimiento en campos especializados del ejercicio profesional. En cada uno de los dos tipos de posgrado ofrece programas de alta calidad. Todos los del primer tipo han sido aceptados en el padrón de posgrados de excelencia del Consejo Nacional de Ciencia y Tecnología (CONACYT).</p>
+        <p>En lo relativo a la investigación, los departamentos del Centro de Ciencias Básicas han definido con precisión su visión particular sobre esta actividad y han desarrollado líneas de investigación básica y aplicada. Los trabajos de las primeras son de alta calidad según estándares internacionales. Los investigadores que las atienden publican en revistas arbitradas internacionales. Los trabajos de las segundas son, también, de muy buen nivel, y responden a necesidades importantes del entorno local, regional y nacional.</p>
+        <p>En lo relativo a la extensión y a la difusión, se ofrecen numerosos cursos sin prerrequisitos académicos y con costos simbólicos, diplomados y cursos de educación continua para la actualización profesional, con la acreditación respectiva y de manera autofinanciable. El Centro de Ciencias Básicas se vincula con su entorno ofreciendo, a bajos costos, servicios asistenciales y participa en la solución de los problemas regionales realizando análisis de laboratorio a precios competitivos.</p>
+        <p>En lo relativo al personal académico, los departamentos del Centro de Ciencias Básicas tienen profesores, investigadores y técnicos en la cantidad necesaria para realizar los programas de docencia, investigación y difusión. El personal de este centro es participativo y propositivo, está identificado y comprometido con la institución.</p>
+        <p>En lo relativo a los alumnos, el centro procura ofrecerles la mejor atención. La educación escolarizada y la educación a distancia representan alternativas en su proceso de formación. El Centro de Ciencias Básicas ha creado un ambiente que invita y compromete a los alumnos a formarse apegados a estándares de calidad.</p>
+        <p>En lo relativo a las instalaciones y recursos materiales y financieros, el Centro de Ciencias Básicas cuenta con la infraestructura suficiente para realizar sus actividades académicas. El apoyo bibliográfico, hemerográfico y de información electrónica tiene alta prioridad para el desarrollo de las actividades académicas.</p>
+      </div>
+
+      <div *ngIf="activeTab === 'decanato'" class="tab-pane">
+        <h3>Decanato</h3>
+        <p><em>Pendiente.</em></p>
+      </div>
+
+      <div *ngIf="activeTab === 'certificaciones'" class="tab-pane">
+        <h3>Certificaciones y Reconocimientos</h3>
+        <p>El Centro de Ciencias Básicas mantiene una política en la cual busca obtener los merecidos reconocimientos a sus esfuerzos académicos, motivo por el cual siempre está en continua tarea de buscar las certificaciones pertinentes para todas sus opciones educativas, las cuales se encuentren en posibilidad de ser certificadas, tanto por entidades nacionales como extranjeras.</p>
+        <p>Los resultados de este esfuerzo se ven coronados en las certificaciones y reconocimientos actuales:</p>
+        <br>
+        <p>[tabla de certificaciones]</p>
+        <br>
+        <p>Del mismo modo, cada año presenta para su certificación / reevaluación algunas de sus carreras, y en este año las carreras aplicando o renovando su certificación son:</p>
+        <br>
+        <p>[tabla de certificaciones en proceso]</p>
+      </div>
+
+    </div>
+  </div>
+</section>

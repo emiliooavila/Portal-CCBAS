@@ -1,0 +1,126 @@
+/* 1. SECCIÓN PRINCIPAL (Solapamiento) */
+.tabs-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* 2. CONTENEDOR DE PESTAÑAS */
+.tabs-container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 3. BARRA DE NAVEGACIÓN DORADA */
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 40px; 
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+
+  button {
+    flex: 1;
+    min-width: 150px;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    color: var(--uaa-azul-marino);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-align: center;
+    &:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transform: translateY(-2px);
+    }
+
+    &.active {
+      background-color: var(--uaa-dorado);
+      color: var(--blanco);
+      box-shadow: 0 4px 10px rgba(229, 168, 35, 0.3);
+      transform: translateY(0);
+    }
+  }
+}
+
+
+/* 4. ÁREA DE CONTENIDO */
+.tabs-content {
+  padding: 3rem 4rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: var(--texto-secundario);
+
+  .tab-pane {
+    animation: fadeIn 0.4s ease;
+
+    h3 {
+      color: var(--uaa-azul-marino);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+      text-align: justify;
+      font-size: 1.05rem;
+    }
+  }
+}
+
+/* 5. ANIMACIONES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 6. ADAPTACIÓN MÓVIL */
+@media (max-width: 768px) {
+  .tabs-nav {
+    border-radius: 16px;
+    
+    button {
+      flex: 1 1 100%;
+      border-radius: 12px;
+    }
+  }
+  
+  .tabs-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* 6. ADAPTACIÓN MÓVIL */
+@media (max-width: 768px) {
+  .tabs-nav button {
+    flex: 1 1 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .tabs-content {
+    padding: 2rem 1.5rem;
+  }
+}

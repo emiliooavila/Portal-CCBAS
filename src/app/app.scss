@@ -18,23 +18,6 @@
 }
 
 
-// 2. MIXINS (Efectos reutilizables)
-@mixin glass-claro {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-}
-
-@mixin glass-oscuro {
-  background: rgba(12, 35, 64, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-}
-
 // ESTILOS GLOBALES Y RESET
 * {
   margin: 0;

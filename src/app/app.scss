@@ -1,0 +1,76 @@
+// VARIABLES DE COLOR (Identidad UAA)
+:root {
+  // Colores Institucionales
+  --uaa-azul-marino: #0c2340;
+  --uaa-azul-claro: #1d4277;
+  --uaa-dorado: #e5a823;
+  --uaa-dorado-hover: #c9931c; 
+  
+  // Colores Neutros
+  --texto-principal: #333333;
+  --texto-secundario: #666666;
+  --fondo-general: #f8f9fa;
+  --blanco: #ffffff;
+}
+
+.contenedor-principal {
+  min-height: calc(100vh - 200px);
+}
+
+
+// 2. MIXINS (Efectos reutilizables)
+@mixin glass-claro {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin glass-oscuro {
+  background: rgba(12, 35, 64, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+// ESTILOS GLOBALES Y RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--fondo-general);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-uaa {
+  background-color: var(--uaa-dorado);
+  color: var(--uaa-azul-marino);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--uaa-dorado-hover);
+    transform: translateY(-2px);
+  }
+}

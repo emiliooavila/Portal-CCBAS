@@ -1,0 +1,29 @@
+/* 1. FONDO Y ESPACIADO GLOBALES */
+.footer-uaa {
+  background-color: var(--uaa-azul-marino, #0c2340);
+  color: var(--blanco, #ffffff);
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+/* 2. LAYOUT GRID */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 3. TIPOGRAFÍAS */
+.footer-info h3 {
+  color: var(--uaa-dorado, #e5a823);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-info p, .footer-contacto p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.3rem;
+}

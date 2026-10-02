@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home';
 // Importamos el page de oferta educativa
 import { OfertaEducativaComponent } from './features/oferta-educativa/oferta-educativa';
+import { DepartamentosComponent } from './features/departamentos/departamentos';
 
 export const routes: Routes = [
   {
@@ -12,6 +13,10 @@ export const routes: Routes = [
   {
     path: 'oferta-educativa',
     component: OfertaEducativaComponent
+  },
+  {
+    path: 'departamentos',
+    component: DepartamentosComponent
   },
   {
     path: '**', 

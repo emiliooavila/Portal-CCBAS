@@ -1,0 +1,25 @@
+<section class="departamentos-section">
+  <!-- Contenedor principal de la lista -->
+  <div class="departamentos-container">
+    
+    <!-- Bucle que recorre el arreglo de departamentos -->
+    @for (depto of departamentos; track depto.nombre; let i = $index) {
+      
+      <!-- Si el índice es impar (1, 3, 5...), se aplica la clase 'reverse' -->
+      <article class="departamento-row" [class.reverse]="i % 2 !== 0">
+        
+        <!-- El cuadrado con el título -->
+        <div class="depto-square">
+          <h3>{{ depto.nombre }}</h3>
+        </div>
+        
+        <!-- El texto al lado -->
+        <div class="depto-text">
+          <p>{{ depto.descripcion }}</p>
+        </div>
+        
+      </article>
+
+    }
+  </div>
+</section>

@@ -1,0 +1,80 @@
+/* IMPORTAR ESTILOS GLOBALES (igual que tu referencia) */
+@use '../../../mixins' as *;
+
+.departamentos-section {
+  padding: 5rem 10%;
+  background-color: var(--blanco, #ffffff);
+}
+
+.departamentos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* Separación vertical entre cada departamento */
+}
+
+/* Fila individual que contiene el cuadrado y el texto */
+.departamento-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Separación horizontal entre cuadrado y texto */
+  
+  /* Aquí sucede la magia para alternar el diseño (zigzag de la imagen) */
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Responsividad: En celulares, todos se apilan en columna */
+  @media (max-width: 768px) {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* El cuadrado que pidió el boceto */
+.depto-square {
+  /* Forzamos proporciones cuadradas */
+  flex: 0 0 280px; 
+  height: 280px;
+  
+  /* Centrado del texto interno */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  
+  /* Aplicamos el mismo mixin y animaciones de tu tarjeta original */
+  @include burbuja-institucional;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+      inset 4px 4px 12px rgba(255, 255, 255, 1),       
+      inset -4px -4px 15px rgba(229, 168, 35, 0.3),      
+      0 12px 25px rgba(12, 35, 64, 0.2);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--uaa-azul-marino, #0C2340);
+    margin: 0;
+  }
+}
+
+/* El contenedor del Lorem Ipsum */
+.depto-text {
+  flex: 1; /* Ocupa el espacio restante */
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    opacity: 0.9;
+    margin: 0;
+  }
+}

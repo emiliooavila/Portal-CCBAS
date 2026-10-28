@@ -1,0 +1,21 @@
+<section class="hero-section">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Oferta <span>Educativa</span></h1>
+    <p>Complementa tu formación con nuestras opciones de pregrado y posgrado, cursos de extensión académica, diplomados y cursos de idiomas que tenemos disponibles para ti.</p>
+  </div>
+</section>
+
+<section class="cards-section">
+  <div class="cards-grid">
+    @for (carrera of carreras; track carrera.nombre) {
+      <article class="card">
+        <h3>{{ carrera.nombre }}</h3>
+        <p>{{ carrera.descripcion }}</p>
+        
+        <div class="card-actions">
+          <button class="btn-card" (click)="verDetalles(carrera)">Ver detalles</button>        </div>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="departamentos-section">
+  <div class="departamentos-container">
+    
+    @for (depto of departamentos; track depto.nombre; let i = $index) {
+      
+      <article class="departamento-row" [class.reverse]="i % 2 !== 0">
+        
+        <div class="depto-square">
+          <h3>{{ depto.nombre }}</h3>
+        </div>
+        
+        <div class="depto-text">
+          <p>{{ depto.descripcion }}</p>
+        </div>
+        
+      </article>
+
+    }
+  </div>
+</section>

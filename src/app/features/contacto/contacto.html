@@ -1,0 +1,73 @@
+<section class="contacto-container">
+  <div class="contacto-header">
+    <h2>Directorio y <span>Ubicación</span></h2>
+    <p>Centro de Ciencias Básicas — Universidad Autónoma de Aguascalientes</p>
+  </div>
+
+  <div class="contacto-grid">
+    <article class="glass-card decanato-card">
+      <div class="card-badge">Decanato CCBAS</div>
+      <h3>{{ decanatoInfo.decano }}</h3>
+      <p class="cargo">{{ decanatoInfo.cargo }}</p>
+
+      <div class="info-list">
+        <div class="info-item">
+          <span class="icon">🏛️</span>
+          <div>
+            <strong>Ubicación:</strong>
+            <p>{{ decanatoInfo.ubicacion }}</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">📍</span>
+          <div>
+            <strong>Dirección:</strong>
+            <p>{{ decanatoInfo.direccion }}</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">📞</span>
+          <div>
+            <strong>Conmutador:</strong>
+            <p>{{ decanatoInfo.telefono }}</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">✉️</span>
+          <div>
+            <strong>Correo Institucional:</strong>
+            <p>{{ decanatoInfo.correo }}</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="icon">🕒</span>
+          <div>
+            <strong>Horario de Atención:</strong>
+            <p>{{ decanatoInfo.horario }}</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="glass-card mapa-card">
+      <h3>Mapa de Infraestructura UAA</h3>
+      <p class="mapa-sub">Ubicación de edificios administrativos, aulas y laboratorios.</p>
+      
+      <div class="mapa-wrapper">
+        <img 
+          src="assets/mapa-uaa.jpg" 
+          alt="Mapa de Infraestructura Universitaria UAA"
+          class="mapa-img"
+        >
+      </div>
+      
+      <a href="assets/mapa-uaa.jpg" target="_blank" class="btn-uaa btn-mapa">
+        Ver Mapa en Alta Resolución ↗
+      </a>
+    </article>
+  </div>
+</section>

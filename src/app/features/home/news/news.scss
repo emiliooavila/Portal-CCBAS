@@ -1,6 +1,5 @@
 @use '../../../../mixins' as *;
 
-/* 2. CONTENEDOR PRINCIPAL */
 .news-section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -20,14 +19,12 @@
   }
 }
 
-/* 3. GRID DE NOTICIAS */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-/* 4. ADAPTACIÓN DE LA TARJETA DE CRISTAL */
 .news-card {
   @include glass-claro;
   padding: 2rem;
@@ -62,7 +59,6 @@
   }
 }
 
-/* 5. BOTÓN DE ENLACE */
 .btn-link {
   background: none;
   color: var(--uaa-azul-claro, #1d4277);

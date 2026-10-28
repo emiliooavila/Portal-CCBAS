@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Necesario para algunas utilidades aunque usemos la nueva sintaxis @for
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-departamentos',

@@ -1,7 +1,5 @@
-/* 1. IMPORTAR ESTILOS GLOBALES */
 @use '../../../../mixins' as *;
 
-/* 2. SECCIÓN PRINCIPAL Y FONDO */
 .hero-section {
   position: relative;
   min-height: 80vh;
@@ -16,7 +14,6 @@
   background-attachment: fixed; 
 }
 
-/* 3. overlay*/
 .overlay {
   position: absolute;
   top: 0;
@@ -27,7 +24,6 @@
   z-index: 1;
 }
 
-/* 4. PANEL (El cuadro flotante) */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -57,7 +53,6 @@
   }
 }
 
-/* 5. BOTONES DE ACCIÓN */
 .hero-actions {
   display: flex;
   gap: 1rem;

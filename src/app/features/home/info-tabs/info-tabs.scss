@@ -1,10 +1,8 @@
-/* 1. SECCIÓN PRINCIPAL (Solapamiento) */
 .tabs-section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-/* 2. CONTENEDOR DE PESTAÑAS */
 .tabs-container {
   background-color: transparent;
   display: flex;
@@ -12,7 +10,6 @@
   gap: 1.5rem;
 }
 
-/* 3. BARRA DE NAVEGACIÓN DORADA */
 .tabs-nav {
   display: flex;
   justify-content: center;
@@ -55,7 +52,6 @@
 }
 
 
-/* 4. ÁREA DE CONTENIDO */
 .tabs-content {
   padding: 3rem 4rem;
   background: rgba(255, 255, 255, 0.75);
@@ -85,7 +81,6 @@
   }
 }
 
-/* 5. ANIMACIONES */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -97,7 +92,6 @@
   }
 }
 
-/* 6. ADAPTACIÓN MÓVIL */
 @media (max-width: 768px) {
   .tabs-nav {
     border-radius: 16px;
@@ -113,7 +107,6 @@
   }
 }
 
-/* 6. ADAPTACIÓN MÓVIL */
 @media (max-width: 768px) {
   .tabs-nav button {
     flex: 1 1 100%;

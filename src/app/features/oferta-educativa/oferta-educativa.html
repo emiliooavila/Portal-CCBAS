@@ -1,4 +1,3 @@
-<!-- Sección Principal (Hero) -->
 <section class="hero-section">
   <div class="overlay"></div>
   <div class="hero-content">
@@ -7,10 +6,8 @@
   </div>
 </section>
 
-<!-- Contenedor de las Cards -->
 <section class="cards-section">
   <div class="cards-grid">
-    <!-- Bucle que recorre el arreglo de las carreas -->
     @for (carrera of carreras; track carrera.nombre) {
       <article class="card">
         <h3>{{ carrera.nombre }}</h3>

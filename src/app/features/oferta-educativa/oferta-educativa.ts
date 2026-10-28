@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './oferta-educativa.scss',
 })
 export class OfertaEducativaComponent {
-  //Las carreras del centro de ciencias basicas
   carreras = [
     { nombre: 'Ing. Bioquímico', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', archivo: 'plan_Ing_Bioquimico.pdf' },
     { nombre: 'Ing. en Computación Inteligente', descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', archivo: 'plan_Ing_Computacion_Inteligente.pdf' },
@@ -25,15 +24,11 @@ export class OfertaEducativaComponent {
 
   verDetalles(carrera: any) {
     const rutaArchivo = `/assets/${carrera.archivo}`;
-    // 2. Crea un elemento <a> en memoria
     const enlace = document.createElement('a');
     enlace.href = rutaArchivo;
     
-    // 3. Establece el atributo 'download' para forzar la descarga en lugar de abrirlo
-    // El valor que le pases será el nombre con el que se guardará en la PC del usuario
     enlace.download = `Plan_de_Estudios_${carrera.nombre}.pdf`;
     
-    // 4. Agrega el enlace al DOM de forma invisible, haz clic y elimínalo
     document.body.appendChild(enlace);
     enlace.click();
     document.body.removeChild(enlace);
